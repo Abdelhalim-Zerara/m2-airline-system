@@ -10,7 +10,7 @@ import org.springframework.web.servlet.function.ServerResponse;
 
 @Configuration
 public class Route {
-    @Bean
+       @Bean
     public RouterFunction<ServerResponse> searchServiceRoute(){
         return GatewayRouterFunctions.route("search-service")
                 .route(RequestPredicates.path("/search/**"), HandlerFunctions.http("http://localhost:8083"))
